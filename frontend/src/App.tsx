@@ -6,13 +6,11 @@ import { Blog } from './pages/Blog'
 import { CreateBlog } from './pages/CreateBlog'
 import { Blogs } from './pages/Blogs'
 import { InvalidPage } from './pages/InvalidPage'
-import { SpeedInsights } from "@vercel/speed-insights/next"
 
 function App() {
 
   return (
     <div className='selection:bg-violet-300 selection:text-violet-800'>
-      <SpeedInsights />
       <BrowserRouter>
         <Routes>
           <Route path='/signin' element={<Signin></Signin>}></Route>
