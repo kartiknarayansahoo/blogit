@@ -20,12 +20,12 @@ export const Navbar = ({ authorName, title, onClick }: { authorName: string, tit
             <div className=" flex ps-2 pe-2 lg:ps-16 items-center">
                 {/* website heading */}
                 <div className="text-3xl font-bold pe-4">
-                    <button onClick={() => navigate('/blogs')} className="hover:cursor-pointer hover:text-violet-600">BlogIt</button>
+                    <button onClick={() => navigate('/blogs')} className="transition duration-400 text-transparent bg-clip-text bg-linear-to-br from-violet-600 to-pink-400 hover:from-violet-600 hover:to-green-400 active:from-violet-700 active:to-green-600 hover:cursor-pointer ">BlogIt</button>
                 </div>
             </div>
             <div className=" flex items-center ps-2 pe-2 lg:pe-16">
                 {/* create blog */}
-                <button onClick={onClick} className="bg-violet-500 hover:bg-violet-600 hover:cursor-pointer active:bg-violet-700 focus:outline-2 focus:outline-offset-1 focus:outline-violet-500 text-white text-sm font-medium rounded-3xl py-2 px-4">{title}</button>
+                <button onClick={onClick} className="transition duration-400 bg-gradient-to-br from-violet-600 to-pink-400 hover:from-violet-600 hover:to-green-400 hover:cursor-pointer active:from-violet-700 active:to-green-600 text-white text-sm font-medium rounded-3xl py-2 px-4 shadow-md shadow-gray-300">{title}</button>
 
                 {/* notif icon */}
                 <div className="px-4">
@@ -45,11 +45,11 @@ const UserBtn = ({ authorName, onClick }: { authorName: string, onClick: MouseEv
         <div className="">
             <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                    <button className="bg-violet-500 hover:bg-violet-600 hover:cursor-pointer active:bg-violet-700 px-4 py-2 text-white rounded-full">{authorName[0].toUpperCase()}</button>
+                    <button className="transition duration-400 bg-gradient-to-br from-violet-600 to-pink-400 hover:bg-gradient-to-br hover:from-violet-600 hover:to-green-400 hover:cursor-pointer active:bg-violet-700 px-4 py-2 text-white rounded-full shadow-md shadow-gray-300">{authorName[0].toUpperCase()}</button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
                     <DropdownMenuItem>My Account</DropdownMenuItem>
-                    <DropdownMenuItem className="bg-violet-500 text-white" onClick={onClick}>Sign out</DropdownMenuItem>
+                    <DropdownMenuItem className="transition duration-400 bg-gradient-to-br from-violet-600 to-pink-400 hover:from-violet-500 hover:to-green-400 active:from-violet-700 active:to-green-600 hover:cursor-pointer text-white focus:text-white" onClick={onClick}>Sign out</DropdownMenuItem>
                 </DropdownMenuContent>
             </DropdownMenu>
         </div>

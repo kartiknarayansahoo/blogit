@@ -111,7 +111,7 @@ export const SigninAuth = () => {
                             "password": e.target.value
                         })
                     }} label="Password" type={"password"} placeholder="********"></InputBox>
-                    <div className="p-4">
+                    <div className="m-4">
                         <AuthButton onClick={sendRequest} label="Sign In"></AuthButton>
                     </div>
                 </div>
@@ -122,7 +122,7 @@ export const SigninAuth = () => {
 
 const AuthButton = ({ label, onClick }: { label: string, onClick: MouseEventHandler<HTMLButtonElement> }) => {
     return (
-        <button onClick={onClick} className="bg-gray-800 hover:bg-gray-900 active:bg-gray-950 text-white w-full rounded-sm p-2 focus:outline-2 focus:border-gray-950 focus:outline-offset-2 focus:outline-gray-950">{label}</button>
+        <button onClick={onClick} className="transition duration-500 bg-transparent bg-gradient-to-br from-gray-800 to-gray-400 hover:from-violet-500 hover:to-green-400 hover:cursor-pointer active:from-violet-700 active:to-green-600 text-white w-full rounded-sm p-2 shadow-md shadow-gray-400">{label}</button>
     )
 }
 
@@ -137,7 +137,7 @@ export const InputBox = ({ label, placeholder, onChange, type }: inputBoxParams)
     return (
         <div className="p-4">
             <div className="pb-2 font-medium">{label}</div>
-            <input onChange={onChange} type={type || "text"} className="bg-gray-50 border-2 border-gray-300 focus:border-gray-500 focus:outline-offset-3 focus:outline-gray-500 rounded-sm p-2 w-full" placeholder={placeholder}></input>
+            <input onChange={onChange} type={type || "text"} className="bg-gray-50 border-2 border-gray-300 focus:border-gray-500 focus:outline-offset-3 focus:outline-gray-500 rounded-sm p-2 w-full " placeholder={placeholder}></input>
         </div>
     )
 }
